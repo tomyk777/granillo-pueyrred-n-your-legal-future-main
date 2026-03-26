@@ -1,0 +1,72 @@
+import { Scale, Users, FileText, Heart, Car } from "lucide-react";
+
+const services = [
+  {
+    icon: Scale,
+    title: "Derecho Previsional",
+    desc: "Análisis de situación laboral y previsional, inicio de trámites jubilatorios, compra de moratoria nueva y vieja, ajuste de haberes jubilatorios.",
+  },
+  {
+    icon: Users,
+    title: "Derecho de Familia",
+    desc: "Tramitación de divorcios, cálculo, reclamo, modificación o ejecución de pensiones alimenticias, inicio de solicitud de planes de responsabilidad parental.",
+  },
+  {
+    icon: FileText,
+    title: "Derecho Civil",
+    desc: "Asesoramiento y representación legal en diversas cuestiones del ámbito civil.",
+  },
+  {
+    icon: Heart,
+    title: "Amparos de Salud",
+    desc: "Acciones legales para garantizar el acceso a prestaciones médicas y cobertura de salud.",
+  },
+  {
+    icon: Car,
+    title: "Siniestros Viales",
+    desc: "Acciones de reclamación de daños ocasionados por accidentes de tránsito.",
+  },
+];
+
+const ServiciosSection = () => {
+  return (
+    <section id="servicios" className="py-24 bg-charcoal">
+      <div className="container mx-auto px-4">
+        <h2 className="font-heading text-3xl md:text-5xl text-silver-light font-bold text-center mb-4">
+          Áreas de Práctica
+        </h2>
+        <div className="w-20 h-1 bg-primary mx-auto mb-14" />
+
+        {/* Row 1: 3 cards */}
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-6">
+          {services.slice(0, 3).map((s) => (
+            <div
+              key={s.title}
+              className="group relative bg-accent/50 border border-silver/10 rounded-lg p-8 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300 cursor-default"
+            >
+              <s.icon className="mb-5 text-primary group-hover:scale-110 transition-transform" size={36} strokeWidth={1.5} />
+              <h3 className="font-heading text-xl text-silver-light font-semibold mb-3">{s.title}</h3>
+              <p className="font-body text-silver/70 text-sm leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Row 2: 2 cards centered */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          {services.slice(3).map((s) => (
+            <div
+              key={s.title}
+              className="group relative bg-accent/50 border border-silver/10 rounded-lg p-8 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300 cursor-default"
+            >
+              <s.icon className="mb-5 text-primary group-hover:scale-110 transition-transform" size={36} strokeWidth={1.5} />
+              <h3 className="font-heading text-xl text-silver-light font-semibold mb-3">{s.title}</h3>
+              <p className="font-body text-silver/70 text-sm leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServiciosSection;
