@@ -1,7 +1,7 @@
 import { Scale, Shield, Heart, Award } from "lucide-react";
 import Image from "next/image";
-import logo from "@/assets/logo.png";
-import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/optimized/logo.webp";
+import heroBg from "@/assets/optimized/hero-bg.webp";
 
 const WHATSAPP_NUMBER = "5493513513178";
 const HERO_WHATSAPP_MESSAGE = "Hola, quiero consultar por el inicio de mi tramite jubilatorio.";
@@ -28,7 +28,14 @@ const HeroSection = () => {
       className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-charcoal md:min-h-screen"
     >
       {/* Background image */}
-      <Image src={heroBg} alt="" fill className="absolute inset-0 w-full h-full object-cover" priority />
+      <Image
+        src={heroBg}
+        alt=""
+        fill
+        className="absolute inset-0 w-full h-full object-cover"
+        sizes="100vw"
+        priority
+      />
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-charcoal/75" />
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
@@ -38,6 +45,8 @@ const HeroSection = () => {
           src={logo}
           alt="Estudio Jurídico Granillo Pueyrredón"
           className="mx-auto mb-5 h-28 w-auto animate-fade-in-up brightness-200 sm:h-32 md:mb-6 md:h-48"
+          sizes="(max-width: 768px) 160px, 220px"
+          fetchPriority="high"
           priority
         />
 

@@ -1,7 +1,7 @@
 import { Instagram, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/assets/Logo-USAR.png";
+import logo from "@/assets/optimized/logo-navbar.webp";
 
 const sectionLinks = [
   { href: "#nosotros", label: "Nosotros" },
@@ -17,7 +17,12 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">
           <div className="flex items-center gap-4 md:justify-start justify-center">
-            <Image src={logo} alt="Logo del Estudio Juridico Granillo Pueyrredon" className="h-10 w-auto" />
+            <Image
+              src={logo}
+              alt="Logo del Estudio Juridico Granillo Pueyrredon"
+              className="h-10 w-auto"
+              sizes="72px"
+            />
             <span className="font-heading text-silver-light text-sm text-center md:text-left">
               Estudio Jurídico Granillo Pueyrredón
             </span>
