@@ -34,6 +34,9 @@ const HeroSection = () => {
         fill
         className="absolute inset-0 h-full w-full object-cover object-[65%_center] md:object-center"
         priority
+        fetchPriority="high"
+        sizes="100vw"
+        quality={72}
       />
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-charcoal/75" />
@@ -45,6 +48,9 @@ const HeroSection = () => {
           alt="Estudio Jurídico Granillo Pueyrredón"
           className="mx-auto mb-5 h-28 w-auto animate-fade-in-up brightness-200 sm:h-32 md:mb-6 md:h-48"
           priority
+          fetchPriority="high"
+          sizes="(max-width: 639px) 112px, (max-width: 767px) 128px, 192px"
+          quality={72}
         />
 
         <h1 id="hero-title" className="mb-5 font-heading text-[2.1rem] font-bold tracking-tight text-silver-light animate-fade-in-up sm:text-4xl md:mb-6 md:text-6xl lg:text-7xl" style={{ animationDelay: "0.15s", opacity: 0 }}>

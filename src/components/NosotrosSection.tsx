@@ -10,6 +10,7 @@ import estudioImg3 from "@/assets/EstudioNuwvo (3).jpeg";
 import estudioImg5 from "@/assets/EstudioNuwvo (5).jpeg";
 import estudioImg6 from "@/assets/EstudioNuwvo (6).jpeg";
 import estudioImg7 from "@/assets/EstudioNuwvo (7).jpeg";
+import estudioImg8 from "@/assets/EstudioNuwvo(8).jpeg";
 
 const valores = [
   { icon: Heart, label: "Empatía" },
@@ -45,6 +46,7 @@ const estudioImages = [
   { src: estudioImg5, alt: "Sala de reuniones del Estudio Jurídico Granillo Pueyrredón" },
   { src: estudioImg6, alt: "Recepción del Estudio Jurídico Granillo Pueyrredón" },
   { src: estudioImg7, alt: "Detalle del Estudio Jurídico Granillo Pueyrredón" },
+  { src: estudioImg8, alt: "Vista adicional del Estudio Jurídico Granillo Pueyrredón" },
 ];
 
 const NosotrosSection = () => {
