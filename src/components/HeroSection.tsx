@@ -87,11 +87,16 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-20 w-full border-y border-primary/60 bg-primary/95 md:absolute md:bottom-0 md:left-0 md:right-0">
-        <div className="grid w-full grid-cols-2 gap-x-6 gap-y-3 px-4 py-4 md:grid-cols-4 md:px-8 lg:px-12">
+        <div className="grid w-full grid-cols-2 border border-primary-foreground/20 bg-primary md:grid-cols-4 md:border-0 md:bg-transparent md:gap-x-6 md:gap-y-3 md:px-8 md:py-4 lg:px-12">
           {differentials.map((d) => (
-            <div key={d.title} className="flex items-center justify-center gap-2 text-center md:justify-center">
-              <d.icon className="text-primary-foreground/85 shrink-0" size={13} strokeWidth={2} />
-              <span className="font-body text-[10px] md:text-[11px] tracking-[0.1em] uppercase text-primary-foreground/90 leading-none">
+            <div
+              key={d.title}
+              className="flex min-h-[46px] items-center gap-2 px-2.5 py-2 text-left [&:nth-child(-n+2)]:border-b [&:nth-child(odd)]:border-r [&:nth-child(odd)]:border-primary-foreground/20 [&:nth-child(-n+2)]:border-primary-foreground/20 md:min-h-0 md:items-center md:justify-center md:px-0 md:py-0 md:text-center md:[&:nth-child(-n+2)]:border-b-0 md:[&:nth-child(odd)]:border-r-0"
+            >
+              <span className="inline-flex h-4 w-4 shrink-0 items-center justify-center md:h-auto md:w-auto">
+                <d.icon className="text-primary-foreground/95" size={11} strokeWidth={2} />
+              </span>
+              <span className="font-body text-[10px] leading-tight tracking-[0.09em] uppercase text-primary-foreground md:text-[11px] md:leading-none md:tracking-[0.1em] md:text-primary-foreground/90">
                 {d.title}
               </span>
             </div>

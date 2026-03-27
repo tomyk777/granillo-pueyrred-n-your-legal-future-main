@@ -71,7 +71,7 @@ const NosotrosSection = () => {
               Más de 25 años de trayectoria avalan un compromiso que nació antes del nuevo milenio y que se proyecta hacia el futuro con la misma convicción del primer día.
             </p>
             <p className="font-body text-foreground/80 leading-relaxed mb-8">
-              Desde sus oficinas iniciales, el estudio se posicionó no solo como un mediador administrativo ante la ANSES, sino como una trinchera legal para reclamar el reajuste de haberes. Su visión es clara: profesionalizar la defensa de los derechos de los jubilados y pensionados.
+              Desde sus oficinas iniciales, el estudio se posicionó no solo como un mediador administrativo ante la ANSES, sino como una trinchera legal para reclamar el reajuste de haberes. Su visión es clara: profesionalizar la defensa de los derechos de los jubilados y pensionados en un contexto donde el sistema previsional enfrentaba constantes reformas.
             </p>
 
             <div className="mb-8">
