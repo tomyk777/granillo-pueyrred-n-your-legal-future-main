@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5493513513178";
+const WHATSAPP_NUMBER = "5493515571438";
 
 const contacts = [
   { name: "Dr. Enrique Granillo Pueyrredón", phone: "3513 51-3178" },

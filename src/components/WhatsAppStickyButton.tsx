@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "5493513513178";
+const WHATSAPP_NUMBER = "5493515571438";
 const WHATSAPP_MESSAGE = "Hola, quiero hablar con el estudio para recibir orientacion legal.";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 

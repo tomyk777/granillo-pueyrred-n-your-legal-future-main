@@ -3,7 +3,7 @@ import Image from "next/image";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const WHATSAPP_NUMBER = "5493513513178";
+const WHATSAPP_NUMBER = "5493515571438";
 const HERO_WHATSAPP_MESSAGE = "Hola, quiero consultar por el inicio de mi tramite jubilatorio.";
 const HERO_WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(HERO_WHATSAPP_MESSAGE)}`;
 
@@ -28,7 +28,13 @@ const HeroSection = () => {
       className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-charcoal md:min-h-screen"
     >
       {/* Background image */}
-      <Image src={heroBg} alt="" fill className="absolute inset-0 w-full h-full object-cover" priority />
+      <Image
+        src={heroBg}
+        alt=""
+        fill
+        className="absolute inset-0 h-full w-full object-cover object-[65%_center] md:object-center"
+        priority
+      />
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-charcoal/75" />
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />

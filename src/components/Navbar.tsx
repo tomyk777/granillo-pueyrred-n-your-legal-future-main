@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/Logo-USAR.png";
 
-const WHATSAPP_NUMBER = "5493513513178";
+const WHATSAPP_NUMBER = "5493515571438";
 const NAVBAR_WHATSAPP_MESSAGE = "Hola, quiero asesoramiento legal sobre mi jubilacion.";
 const NAVBAR_WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(NAVBAR_WHATSAPP_MESSAGE)}`;
 

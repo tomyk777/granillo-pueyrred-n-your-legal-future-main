@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "5493513513178";
+const WHATSAPP_NUMBER = "5493515571438";
 const CTA_BANNER_WHATSAPP_MESSAGE = "Hola, quiero una consulta personalizada con un especialista en jubilaciones.";
 const CTA_BANNER_WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(CTA_BANNER_WHATSAPP_MESSAGE)}`;
 
