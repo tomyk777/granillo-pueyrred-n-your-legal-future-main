@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import { Shield, Heart, Scale, Handshake, Users, Gavel, PenTool, BookOpen } from "lucide-react";
 import Image from "next/image";
 import nosotrosImg from "@/assets/nosotros.jpg";
-import estudioImg1 from "@/assets/estudio.jpg";
-import estudioImg2 from "@/assets/estudio2.jpg";
-import estudioImg3 from "@/assets/estudio3.jpg";
-import estudioImg4 from "@/assets/estudio4.jpg";
+import estudioImg1 from "@/assets/EstudioNuwvo (1).jpeg";
+import estudioImg2 from "@/assets/EstudioNuwvo (2).jpeg";
+import estudioImg3 from "@/assets/EstudioNuwvo (3).jpeg";
+import estudioImg5 from "@/assets/EstudioNuwvo (5).jpeg";
+import estudioImg6 from "@/assets/EstudioNuwvo (6).jpeg";
+import estudioImg7 from "@/assets/EstudioNuwvo (7).jpeg";
 
 const valores = [
   { icon: Heart, label: "Empatía" },
@@ -40,7 +42,9 @@ const estudioImages = [
   { src: estudioImg1, alt: "Interior del Estudio Jurídico Granillo Pueyrredón" },
   { src: estudioImg2, alt: "Espacio de trabajo del Estudio Jurídico Granillo Pueyrredón" },
   { src: estudioImg3, alt: "Sala del Estudio Jurídico Granillo Pueyrredón" },
-  { src: estudioImg4, alt: "Oficinas del Estudio Jurídico Granillo Pueyrredón" },
+  { src: estudioImg5, alt: "Sala de reuniones del Estudio Jurídico Granillo Pueyrredón" },
+  { src: estudioImg6, alt: "Recepción del Estudio Jurídico Granillo Pueyrredón" },
+  { src: estudioImg7, alt: "Detalle del Estudio Jurídico Granillo Pueyrredón" },
 ];
 
 const NosotrosSection = () => {
