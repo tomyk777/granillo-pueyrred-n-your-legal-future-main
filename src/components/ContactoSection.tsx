@@ -33,25 +33,25 @@ const ContactoSection = () => {
   };
 
   return (
-    <section id="contacto" className="py-24 bg-warm-white">
-      <div className="container mx-auto px-4">
+    <section id="contacto" className="bg-warm-white py-16 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6">
         <h2 className="font-heading text-3xl md:text-5xl text-accent font-bold text-center mb-4">
           Contacto
         </h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-14" />
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Info - redesigned */}
           <div className="space-y-6">
             {/* Phones as cards */}
-            <div className="bg-background border border-border rounded-lg p-6 shadow-sm">
+            <div className="rounded-lg border border-border bg-background p-5 shadow-sm md:p-6">
               <h3 className="font-heading text-lg text-accent font-semibold mb-4 flex items-center gap-2">
                 <Phone className="text-primary" size={18} />
                 Teléfonos
               </h3>
               <div className="space-y-3">
                 {contacts.map((c) => (
-                  <div key={c.name} className="flex items-center justify-between">
+                  <div key={c.name} className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
                     <span className="font-body text-muted-foreground text-sm">{c.name}</span>
                     <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola, quiero una consulta para contactar a ${c.name}.`)}`} target="_blank" rel="noopener noreferrer" className="font-body text-primary hover:text-burgundy-light transition-colors text-sm font-medium">
                       {c.phone}
@@ -64,16 +64,16 @@ const ContactoSection = () => {
             {/* Other info */}
             <div className="grid gap-4">
               {infoItems.map((item) => (
-                <div key={item.label} className="flex items-start gap-4 bg-background border border-border rounded-lg p-4 shadow-sm">
+                <div key={item.label} className="flex items-start gap-4 rounded-lg border border-border bg-background p-4 shadow-sm">
                   <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
                     <item.icon className="text-primary" size={18} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-body font-semibold text-accent text-sm">{item.label}</p>
                     {item.href ? (
-                      <a href={item.href} target="_blank" rel="noopener noreferrer" className="font-body text-muted-foreground text-sm hover:text-primary transition-colors">{item.value}</a>
+                      <a href={item.href} target="_blank" rel="noopener noreferrer" className="font-body text-muted-foreground text-sm break-words hover:text-primary transition-colors">{item.value}</a>
                     ) : (
-                      <p className="font-body text-muted-foreground text-sm">{item.value}</p>
+                      <p className="font-body text-muted-foreground text-sm break-words">{item.value}</p>
                     )}
                   </div>
                 </div>
@@ -82,7 +82,7 @@ const ContactoSection = () => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="bg-background border border-border rounded-lg p-8 shadow-sm space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5 rounded-lg border border-border bg-background p-6 shadow-sm md:p-8">
             <h3 className="font-heading text-xl text-accent font-semibold mb-2">Envianos tu consulta</h3>
             <div>
               <label className="font-body text-sm text-muted-foreground mb-1 block">Nombre</label>

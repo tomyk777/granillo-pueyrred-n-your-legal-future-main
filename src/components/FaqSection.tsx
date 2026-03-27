@@ -28,20 +28,20 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section id="faq" className="py-24 bg-warm-white">
-      <div className="container mx-auto px-4">
+    <section id="faq" className="bg-warm-white py-16 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6">
         <h2 className="font-heading text-3xl md:text-5xl text-accent font-bold text-center mb-4">
           Preguntas Frecuentes
         </h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-12" />
 
-        <div className="grid lg:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
+        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-2 lg:gap-10">
           <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="bg-background border border-border rounded-lg px-6 shadow-sm"
+                className="rounded-lg border border-border bg-background px-4 shadow-sm md:px-6"
               >
                 <AccordionTrigger className="font-heading text-left text-accent hover:text-primary text-base md:text-lg py-5">
                   {faq.q}

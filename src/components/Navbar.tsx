@@ -49,9 +49,9 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-charcoal/95 backdrop-blur-sm border-b border-silver/20">
-      <div className="container mx-auto flex items-center justify-between py-3 px-4">
+      <div className="container mx-auto flex items-center justify-between px-4 py-2.5 md:py-3">
         <Link href="#inicio" className="flex items-center gap-3">
-          <Image src={logo} alt="Estudio Juridico GP" className="h-12 w-auto brightness-200" priority />
+          <Image src={logo} alt="Estudio Juridico GP" className="h-10 w-auto brightness-200 md:h-12" priority />
         </Link>
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (

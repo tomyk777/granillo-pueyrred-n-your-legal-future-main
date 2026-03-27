@@ -25,18 +25,18 @@ const testimonials = [
 
 const TestimoniosSection = () => {
   return (
-    <section id="testimonios" className="py-24 bg-charcoal">
-      <div className="container mx-auto px-4">
+    <section id="testimonios" className="bg-charcoal py-16 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6">
         <h2 className="font-heading text-3xl md:text-5xl text-silver-light font-bold text-center mb-4">
           Testimonios
         </h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-14" />
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-2 md:gap-8">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="relative bg-accent/40 border border-silver/10 rounded-lg p-8"
+              className="relative rounded-lg border border-silver/10 bg-accent/40 p-6 md:p-8"
             >
               <Quote className="text-primary/40 mb-4" size={32} />
               <p className="font-body text-silver/80 italic leading-relaxed mb-6">

@@ -13,8 +13,8 @@ const sectionLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-charcoal border-t border-silver/10 py-12">
-      <div className="container mx-auto px-4">
+    <footer className="border-t border-silver/10 bg-charcoal py-10 md:py-12">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">
           <div className="flex items-center gap-4 md:justify-start justify-center">
             <Image src={logo} alt="GP" className="h-10 w-auto" />
@@ -44,10 +44,10 @@ const Footer = () => {
               href="https://www.google.com/maps/place/Duarte+Quir%C3%B3s+620,+C%C3%B3rdoba,+Argentina/@-31.4135,-64.1888,17z"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-start gap-2 text-silver hover:text-primary transition-colors"
+              className="inline-flex items-start gap-2 text-silver transition-colors hover:text-primary"
             >
               <MapPin size={18} className="mt-0.5 shrink-0" />
-              <span className="font-body text-sm">Duarte Quirós 620, 2° Piso, Oficina 5 · Córdoba</span>
+              <span className="font-body text-sm break-words">Duarte Quirós 620, 2° Piso, Oficina 5 · Córdoba</span>
             </a>
             <a
               href="https://www.instagram.com/estudiojuridicogranillo"

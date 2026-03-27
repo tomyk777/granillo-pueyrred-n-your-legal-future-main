@@ -4,19 +4,19 @@ const CTA_BANNER_WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeU
 
 const CtaBanner = () => {
   return (
-    <section className="bg-primary py-16">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="font-heading text-2xl md:text-4xl text-primary-foreground font-bold mb-4">
+    <section className="bg-primary py-14 md:py-16">
+      <div className="container mx-auto px-4 text-center sm:px-6">
+        <h2 className="mb-4 font-heading text-2xl font-bold text-primary-foreground md:text-4xl">
           Consultá con especialistas en jubilaciones
         </h2>
-        <p className="font-body text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+        <p className="mx-auto mb-8 max-w-2xl font-body text-base text-primary-foreground/80 md:text-lg">
           Contactanos y recibí una consulta personalizada con nuestro equipo de profesionales.
         </p>
         <a
           href={CTA_BANNER_WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-primary-foreground text-primary font-body font-semibold px-10 py-4 text-lg tracking-wider uppercase rounded transition-all duration-300 hover:bg-silver-light hover:shadow-lg"
+          className="inline-block w-full max-w-xs rounded bg-primary-foreground px-8 py-3.5 font-body text-base font-semibold tracking-wider text-primary uppercase transition-all duration-300 hover:bg-silver-light hover:shadow-lg sm:w-auto sm:px-10 sm:py-4 sm:text-lg"
         >
           Consultanos
         </a>
