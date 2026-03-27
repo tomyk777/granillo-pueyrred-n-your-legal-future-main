@@ -33,9 +33,9 @@ const ContactoSection = () => {
   };
 
   return (
-    <section id="contacto" className="bg-warm-white py-16 md:py-24">
+    <section id="contacto" aria-labelledby="contacto-title" className="bg-warm-white py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6">
-        <h2 className="font-heading text-3xl md:text-5xl text-accent font-bold text-center mb-4">
+        <h2 id="contacto-title" className="font-heading text-3xl md:text-5xl text-accent font-bold text-center mb-4">
           Contacto
         </h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-14" />
@@ -53,7 +53,7 @@ const ContactoSection = () => {
                 {contacts.map((c) => (
                   <div key={c.name} className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
                     <span className="font-body text-muted-foreground text-sm">{c.name}</span>
-                    <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola, quiero una consulta para contactar a ${c.name}.`)}`} target="_blank" rel="noopener noreferrer" className="font-body text-primary hover:text-burgundy-light transition-colors text-sm font-medium">
+                    <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola, quiero una consulta para contactar a ${c.name}.`)}`} target="_blank" rel="noopener noreferrer" aria-label={`Consultar por WhatsApp con ${c.name}`} className="font-body text-primary hover:text-burgundy-light transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 rounded-sm">
                       {c.phone}
                     </a>
                   </div>
@@ -71,7 +71,7 @@ const ContactoSection = () => {
                   <div className="min-w-0">
                     <p className="font-body font-semibold text-accent text-sm">{item.label}</p>
                     {item.href ? (
-                      <a href={item.href} target="_blank" rel="noopener noreferrer" className="font-body text-muted-foreground text-sm break-words hover:text-primary transition-colors">{item.value}</a>
+                      <a href={item.href} target="_blank" rel="noopener noreferrer" className="font-body text-muted-foreground text-sm break-words hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 rounded-sm">{item.value}</a>
                     ) : (
                       <p className="font-body text-muted-foreground text-sm break-words">{item.value}</p>
                     )}
@@ -83,32 +83,40 @@ const ContactoSection = () => {
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-5 rounded-lg border border-border bg-background p-6 shadow-sm md:p-8">
-            <h3 className="font-heading text-xl text-accent font-semibold mb-2">Envianos tu consulta</h3>
+            <h3 id="contacto-form-title" className="font-heading text-xl text-accent font-semibold mb-2">Envianos tu consulta</h3>
             <div>
-              <label className="font-body text-sm text-muted-foreground mb-1 block">Nombre</label>
+              <label htmlFor="nombre" className="font-body text-sm text-muted-foreground mb-1 block">Nombre</label>
               <input
+                id="nombre"
+                name="nombre"
                 type="text"
                 required
                 maxLength={100}
+                autoComplete="name"
                 value={form.nombre}
                 onChange={(e) => setForm({ ...form, nombre: e.target.value })}
                 className="w-full border border-input rounded px-4 py-3 font-body text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
               />
             </div>
             <div>
-              <label className="font-body text-sm text-muted-foreground mb-1 block">Teléfono</label>
+              <label htmlFor="telefono" className="font-body text-sm text-muted-foreground mb-1 block">Teléfono</label>
               <input
+                id="telefono"
+                name="telefono"
                 type="tel"
                 required
                 maxLength={20}
+                autoComplete="tel"
                 value={form.telefono}
                 onChange={(e) => setForm({ ...form, telefono: e.target.value })}
                 className="w-full border border-input rounded px-4 py-3 font-body text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
               />
             </div>
             <div>
-              <label className="font-body text-sm text-muted-foreground mb-1 block">Mensaje</label>
+              <label htmlFor="mensaje" className="font-body text-sm text-muted-foreground mb-1 block">Mensaje</label>
               <textarea
+                id="mensaje"
+                name="mensaje"
                 required
                 maxLength={1000}
                 rows={4}

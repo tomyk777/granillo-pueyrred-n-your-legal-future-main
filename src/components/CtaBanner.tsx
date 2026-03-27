@@ -16,7 +16,7 @@ const CtaBanner = () => {
           href={CTA_BANNER_WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block w-full max-w-xs rounded bg-primary-foreground px-8 py-3.5 font-body text-base font-semibold tracking-wider text-primary uppercase transition-all duration-300 hover:bg-silver-light hover:shadow-lg sm:w-auto sm:px-10 sm:py-4 sm:text-lg"
+          className="inline-block w-full max-w-xs rounded bg-primary-foreground px-8 py-3.5 font-body text-base font-semibold tracking-wider text-primary uppercase transition-all duration-300 hover:bg-silver-light hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-silver-light focus-visible:ring-offset-2 focus-visible:ring-offset-primary sm:w-auto sm:px-10 sm:py-4 sm:text-lg"
         >
           Consultanos
         </a>

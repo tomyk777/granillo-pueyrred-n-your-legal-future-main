@@ -30,9 +30,9 @@ const services = [
 
 const ServiciosSection = () => {
   return (
-    <section id="servicios" className="bg-charcoal py-16 md:py-24">
+    <section id="servicios" aria-labelledby="servicios-title" className="bg-charcoal py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6">
-        <h2 className="font-heading text-3xl md:text-5xl text-silver-light font-bold text-center mb-4">
+        <h2 id="servicios-title" className="font-heading text-3xl md:text-5xl text-silver-light font-bold text-center mb-4">
           Áreas de Práctica
         </h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-14" />
@@ -46,7 +46,7 @@ const ServiciosSection = () => {
             >
               <s.icon className="mb-4 text-primary transition-transform group-hover:scale-110 md:mb-5" size={34} strokeWidth={1.5} />
               <h3 className="mb-2.5 font-heading text-xl font-semibold text-silver-light md:mb-3">{s.title}</h3>
-              <p className="font-body text-silver/70 text-sm leading-relaxed">{s.desc}</p>
+              <p className="font-body text-silver/85 text-sm leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
@@ -60,7 +60,7 @@ const ServiciosSection = () => {
             >
               <s.icon className="mb-4 text-primary transition-transform group-hover:scale-110 md:mb-5" size={34} strokeWidth={1.5} />
               <h3 className="mb-2.5 font-heading text-xl font-semibold text-silver-light md:mb-3">{s.title}</h3>
-              <p className="font-body text-silver/70 text-sm leading-relaxed">{s.desc}</p>
+              <p className="font-body text-silver/85 text-sm leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>

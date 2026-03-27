@@ -25,9 +25,9 @@ const testimonials = [
 
 const TestimoniosSection = () => {
   return (
-    <section id="testimonios" className="bg-charcoal py-16 md:py-24">
+    <section id="testimonios" aria-labelledby="testimonios-title" className="bg-charcoal py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6">
-        <h2 className="font-heading text-3xl md:text-5xl text-silver-light font-bold text-center mb-4">
+        <h2 id="testimonios-title" className="font-heading text-3xl md:text-5xl text-silver-light font-bold text-center mb-4">
           Testimonios
         </h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-14" />
@@ -38,7 +38,7 @@ const TestimoniosSection = () => {
               key={i}
               className="relative rounded-lg border border-silver/10 bg-accent/40 p-6 md:p-8"
             >
-              <Quote className="text-primary/40 mb-4" size={32} />
+              <Quote aria-hidden="true" className="text-primary/60 mb-4" size={32} />
               <p className="font-body text-silver/80 italic leading-relaxed mb-6">
                 "{t.text}"
               </p>
@@ -48,7 +48,7 @@ const TestimoniosSection = () => {
                 </div>
                 <div>
                   <p className="font-body text-silver-light font-semibold text-sm">{t.name}</p>
-                  <p className="font-body text-silver/50 text-xs">{t.location}</p>
+                  <p className="font-body text-silver/70 text-xs">{t.location}</p>
                 </div>
               </div>
             </div>

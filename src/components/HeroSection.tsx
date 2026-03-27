@@ -24,6 +24,7 @@ const HeroSection = () => {
   return (
     <section
       id="inicio"
+      aria-labelledby="hero-title"
       className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-charcoal md:min-h-screen"
     >
       {/* Background image */}
@@ -40,7 +41,7 @@ const HeroSection = () => {
           priority
         />
 
-        <h1 className="mb-5 font-heading text-[2.1rem] font-bold tracking-tight text-silver-light animate-fade-in-up sm:text-4xl md:mb-6 md:text-6xl lg:text-7xl" style={{ animationDelay: "0.15s", opacity: 0 }}>
+        <h1 id="hero-title" className="mb-5 font-heading text-[2.1rem] font-bold tracking-tight text-silver-light animate-fade-in-up sm:text-4xl md:mb-6 md:text-6xl lg:text-7xl" style={{ animationDelay: "0.15s", opacity: 0 }}>
           Hacé valer tus años de trabajo
         </h1>
 
@@ -57,13 +58,13 @@ const HeroSection = () => {
             href={HERO_WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block w-full max-w-xs rounded bg-primary px-8 py-3.5 font-body text-base font-semibold tracking-wider text-primary-foreground uppercase transition-all duration-300 hover:bg-burgundy-light hover:shadow-lg hover:shadow-primary/30 sm:w-auto sm:px-10 sm:py-4 sm:text-lg"
+            className="inline-block w-full max-w-xs rounded bg-primary px-8 py-3.5 font-body text-base font-semibold tracking-wider text-primary-foreground uppercase transition-all duration-300 hover:bg-burgundy-light hover:shadow-lg hover:shadow-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-silver-light/90 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal sm:w-auto sm:px-10 sm:py-4 sm:text-lg"
           >
             Consultanos
           </a>
           <a
             href="#servicios"
-            className="inline-block w-full max-w-xs rounded border border-silver/45 bg-charcoal/35 px-8 py-3.5 font-body text-base font-semibold tracking-wider text-silver-light uppercase transition-all duration-300 hover:border-primary hover:bg-charcoal/55 hover:text-primary sm:w-auto sm:py-4 sm:text-lg"
+            className="inline-block w-full max-w-xs rounded border border-silver/45 bg-charcoal/35 px-8 py-3.5 font-body text-base font-semibold tracking-wider text-silver-light uppercase transition-all duration-300 hover:border-primary hover:bg-charcoal/55 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/85 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal sm:w-auto sm:py-4 sm:text-lg"
           >
             Ver servicios
           </a>

@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">
           <div className="flex items-center gap-4 md:justify-start justify-center">
-            <Image src={logo} alt="GP" className="h-10 w-auto" />
+            <Image src={logo} alt="Logo del Estudio Juridico Granillo Pueyrredon" className="h-10 w-auto" />
             <span className="font-heading text-silver-light text-sm text-center md:text-left">
               Estudio Jurídico Granillo Pueyrredón
             </span>
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-6 border-t border-silver/10 text-center">
-          <p className="font-body text-silver/40 text-xs">
+          <p className="font-body text-silver/70 text-xs">
             © {new Date().getFullYear()} Estudio Jurídico Granillo Pueyrredón. Todos los derechos reservados.
           </p>
         </div>
