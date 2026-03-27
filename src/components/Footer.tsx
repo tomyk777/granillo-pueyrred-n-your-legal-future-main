@@ -1,7 +1,7 @@
 import { Instagram, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/assets/Logo-USAR.png";
+import logo from "@/assets/Logo-USAR.webp";
 
 const sectionLinks = [
   { href: "#nosotros", label: "Nosotros" },

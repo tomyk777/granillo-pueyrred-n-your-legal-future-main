@@ -1,6 +1,6 @@
 import { Scale, Shield, Heart, Award } from "lucide-react";
 import Image from "next/image";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const WHATSAPP_NUMBER = "5493515571438";

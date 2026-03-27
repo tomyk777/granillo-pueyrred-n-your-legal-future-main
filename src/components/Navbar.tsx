@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/assets/Logo-USAR.png";
+import logo from "@/assets/Logo-USAR.webp";
 
 const WHATSAPP_NUMBER = "5493515571438";
 const NAVBAR_WHATSAPP_MESSAGE = "Hola, quiero asesoramiento legal sobre mi jubilacion.";
@@ -23,14 +23,23 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState(navLinks[0].href);
 
   useEffect(() => {
+    const sections = navLinks
+      .map((link) => {
+        const section = document.querySelector(link.href);
+        return section instanceof HTMLElement ? { href: link.href, section } : null;
+      })
+      .filter((entry): entry is { href: string; section: HTMLElement } => entry !== null);
+
+    let sectionOffsets = sections.map(({ href, section }) => ({ href, top: section.offsetTop }));
+    let rafId = 0;
+
     const updateActiveSection = () => {
       const currentPosition = window.scrollY + 140;
       let currentSection = navLinks[0].href;
 
-      for (const link of navLinks) {
-        const section = document.querySelector(link.href);
-        if (section instanceof HTMLElement && currentPosition >= section.offsetTop) {
-          currentSection = link.href;
+      for (const { href, top } of sectionOffsets) {
+        if (currentPosition >= top) {
+          currentSection = href;
         }
       }
 
@@ -39,13 +48,33 @@ const Navbar = () => {
       );
     };
 
-    updateActiveSection();
-    window.addEventListener("scroll", updateActiveSection, { passive: true });
-    window.addEventListener("resize", updateActiveSection);
+    const handleScroll = () => {
+      if (rafId !== 0) {
+        return;
+      }
+
+      rafId = window.requestAnimationFrame(() => {
+        updateActiveSection();
+        rafId = 0;
+      });
+    };
+
+    const handleResize = () => {
+      sectionOffsets = sections.map(({ href, section }) => ({ href, top: section.offsetTop }));
+      updateActiveSection();
+    };
+
+    handleResize();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("scroll", updateActiveSection);
-      window.removeEventListener("resize", updateActiveSection);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+
+      if (rafId !== 0) {
+        window.cancelAnimationFrame(rafId);
+      }
     };
   }, []);
 
