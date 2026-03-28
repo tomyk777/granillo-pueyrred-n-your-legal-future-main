@@ -16,6 +16,7 @@ const siteName = "Abogados previsionales en Córdoba | Estudio Granillo Pueyrred
 const siteDescription =
   "Estudio jurídico especializado en derecho previsional, seguridad social y asesoria legal en Córdoba. Jubilaciones, pensiones, moratorias y reajustes ANSES. Más de 25 años de experiencia.";
 const logoUrl = new URL("/logo.png", siteUrl).toString();
+const ogImageUrl = new URL("/og-imagen.png", siteUrl).toString();
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -114,10 +115,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: logoUrl,
+        url: ogImageUrl,
         width: 1200,
         height: 630,
-        alt: `${siteName} logo`,
+        alt: `${siteName} imagen Open Graph`,
       },
     ],
   },
@@ -125,7 +126,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteName,
     description: siteDescription,
-    images: [logoUrl],
+    images: [ogImageUrl],
   },
   icons: {
     icon: [
