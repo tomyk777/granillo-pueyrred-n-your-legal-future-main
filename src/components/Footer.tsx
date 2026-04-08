@@ -30,7 +30,7 @@ const Footer = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="font-body text-sm text-silver hover:text-primary transition-colors"
+                  className="font-body text-sm text-silver underline underline-offset-4 decoration-silver/70 transition-colors hover:text-primary hover:decoration-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/85 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal rounded-sm"
                 >
                   {link.label}
                 </Link>
@@ -44,7 +44,7 @@ const Footer = () => {
               href="https://www.google.com/maps/place/Duarte+Quir%C3%B3s+620,+C%C3%B3rdoba,+Argentina/@-31.4135,-64.1888,17z"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-start gap-2 text-silver transition-colors hover:text-primary"
+              className="inline-flex items-start gap-2 text-silver underline underline-offset-4 decoration-silver/70 transition-colors hover:text-primary hover:decoration-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/85 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal rounded-sm"
             >
               <MapPin size={18} className="mt-0.5 shrink-0" />
               <span className="font-body text-sm break-words">Duarte Quirós 620, 2° Piso, Oficina 5 · Córdoba</span>
@@ -53,7 +53,7 @@ const Footer = () => {
               href="https://www.instagram.com/estudiojuridicogranillo"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center md:justify-start gap-2 text-silver hover:text-primary transition-colors"
+              className="flex items-center justify-center md:justify-start gap-2 text-silver underline underline-offset-4 decoration-silver/70 transition-colors hover:text-primary hover:decoration-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/85 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal rounded-sm"
             >
               <Instagram size={18} />
               <span className="font-body text-sm">@estudiojuridicogranillo</span>
@@ -62,16 +62,16 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-6 border-t border-silver/10 text-center">
-          <p className="font-body text-silver/70 text-xs">
+          <p className="font-body text-silver/85 text-xs">
             © {new Date().getFullYear()} Estudio Jurídico Granillo Pueyrredón. Todos los derechos reservados.
           </p>
-          <p className="mt-2 font-body text-silver/60 text-xs">
+          <p className="mt-2 font-body text-silver/85 text-xs">
             Desarrollado por{" "}
             <a
               href="https://www.linkedin.com/in/tom%C3%A1s-kreczmer-b5682a37a/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-silver transition-colors hover:text-primary"
+              className="text-silver underline underline-offset-4 decoration-silver/70 transition-colors hover:text-primary hover:decoration-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/85 focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal rounded-sm"
             >
               Tomás Kreczmer
             </a>
