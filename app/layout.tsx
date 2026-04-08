@@ -11,7 +11,7 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://estudiojuridicogranillo.vercel.app/";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://xn--estudiojurdicogranillopueyrredn-73c2t.com/";
 const siteName = "Abogados previsionales en Córdoba | Estudio Granillo Pueyrredón";
 const siteDescription =
   "Estudio jurídico especializado en derecho previsional, seguridad social y asesoria legal en Córdoba. Jubilaciones, pensiones, moratorias y reajustes ANSES. Más de 25 años de experiencia.";
