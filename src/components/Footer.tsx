@@ -65,6 +65,17 @@ const Footer = () => {
           <p className="font-body text-silver/70 text-xs">
             © {new Date().getFullYear()} Estudio Jurídico Granillo Pueyrredón. Todos los derechos reservados.
           </p>
+          <p className="mt-2 font-body text-silver/60 text-xs">
+            Desarrollado por{" "}
+            <a
+              href="https://www.linkedin.com/in/tom%C3%A1s-kreczmer-b5682a37a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-silver transition-colors hover:text-primary"
+            >
+              Tomás Kreczmer
+            </a>
+          </p>
         </div>
       </div>
     </footer>
